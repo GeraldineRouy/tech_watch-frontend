@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title></title>
-  <link rel="stylesheet" href="css/style.css">
+<!--  <link rel="stylesheet" href="css/style.css">-->
   <meta name="description" content="">
 
   <meta property="og:title" content="">
@@ -20,13 +20,43 @@
 
   <link rel="manifest" href="site.webmanifest">
   <meta name="theme-color" content="#fafafa">
+
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
 </head>
 
-<body>
+<body class="flex flex-col">
 
-  <!-- Add your site or application content here -->
-  <p>Hello world! This is HTML5 Boilerplate.</p>
-  <script src="js/app.js"></script>
+<!-- Add your site or application content here -->
+<h1 class="text-center text-4xl">Tech Watch</h1>
+
+<section class="flex flex-col items-center">
+  <h2>Saisie d'un nouveau lien</h2>
+  <form>
+    <div>
+      <label for="title">
+        Titre
+      </label>
+      <input class="border-2 border-gray-300 focus:border-blue-400" type="text" id="title" name="title" required>
+    </div>
+    <div>
+      <label for="url">
+        URL
+      </label>
+      <input class="border-2 border-gray-300 focus:border-blue-400" type="url" id="url" name="url" required>
+    </div>
+    <div>
+      <label for="description">
+        Description
+      </label><br>
+      <textarea class="border-2 border-gray-300 focus:border-blue-400" id="description" name="description" rows="3" cols="40">Enter a description about this link...
+      </textarea>
+    </div>
+    <button class="px-2 py-1 rounded bg-violet-500 hover:bg-violet-600 hover:text-white focus:outline-2 focus:outline-offset-2 focus:outline-violet-500 active:bg-violet-700" type="submit">Hop !</button>
+  </form>
+
+</section>
+
+<script src="js/app.js"></script>
 
 </body>
 
